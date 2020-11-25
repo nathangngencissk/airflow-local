@@ -18,6 +18,6 @@ with DAG(dag_id='mysql_query', schedule_interval='0 0 * * *', default_args=defau
     task = MySqlOperator(
             task_id='run_sql',
             sql= query,
-            mysql_conn_id=mysql_con,
+            mysql_conn_id='mysql_con',
             dag=dag)
         
